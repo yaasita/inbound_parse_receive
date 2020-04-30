@@ -1,0 +1,20 @@
+{
+  "name": "mailrecieve",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint *.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "busboy": "^0.3.1",
+    "nodemailer": "^6.4.6"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
