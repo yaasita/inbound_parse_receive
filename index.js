@@ -20,6 +20,7 @@ exports.handler = async (req, res) => {
     return res.status(400).send("Bad Request\n");
   }
   try {
+    console.log(maildata);
     await send_mail(maildata);
   } catch (e) {
     console.log(e);
@@ -30,7 +31,7 @@ exports.handler = async (req, res) => {
 
 async function parse_form_data(req) {
   const payload = await new Promise((resolv) => {
-    const busboy = new Busboy({ headers: req.headers });
+    const busboy = Busboy({ headers: req.headers });
     let email_field;
     busboy.on("field", (fieldname, val) => {
       if (fieldname === "email") {
