@@ -4,6 +4,6 @@ Receive webhook from sendgrid
 
 ## deploy
 
-    gcloud functions deploy webhook-receive --runtime nodejs10 \
-        --entry-point handler --region asia-northeast1 \
-        --trigger-http --allow-unauthenticated 
+    gcloud functions deploy webhook-receive --gen2 --runtime=nodejs16 \
+        --region=asia-northeast1 --entry-point=handler \
+        --trigger-http --allow-unauthenticated
